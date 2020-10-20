@@ -26,7 +26,7 @@ export class RailwayDatabaseService {
   }
 
   createNewUser(userDetails: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/login`, userDetails, {responseType: 'text'} );
+    return this.http.post(`${this.baseUrl}/create/user`, userDetails, {responseType: 'text'} );
   }
 
   getStationList(searchText: any): Observable<any> {

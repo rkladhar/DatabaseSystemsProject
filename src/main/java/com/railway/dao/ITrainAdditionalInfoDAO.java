@@ -14,6 +14,7 @@ public interface ITrainAdditionalInfoDAO extends JpaRepository<TrainAdditionalIn
     @Modifying
     @Transactional
     @Query(value = "UPDATE TrainAdditionalInfo t SET t.availableSeats = t.availableSeats - :noOfPassengers " +
-            "WHERE t.trainAdditionalInfoCompositeKey.trainNo =:trainNo AND t.trainAdditionalInfoCompositeKey.dateOfJourney =:dateOfJourney")
+            "WHERE t.trainAdditionalInfoCompositeKey.trainNo =:trainNo AND " +
+            "t.trainAdditionalInfoCompositeKey.dateOfJourney =:dateOfJourney")
     void updateAvailableSeats(int noOfPassengers, Long trainNo, LocalDate dateOfJourney);
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {RailwayDatabaseService} from "../railway-database.service";
+import {Router} from '@angular/router';
+import {RailwayDatabaseService} from '../railway-database.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.railwayDatabaseService.login(this.userCredentials).subscribe(data =>{
-      if(data != null){
+      if(data != null && data.length != 0){
         this.railwayDatabaseService.userId = data;
         this.gotoHeaderPage();
       }
