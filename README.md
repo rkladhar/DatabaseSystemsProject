@@ -13,7 +13,7 @@ pom.xml file and automatically determines it as a maven project
 2. Set the configuration properties to point to RailwayApplication.java
 which is the application file for this project
 3. Run the commands 'mvn clean' and 'mvn install' in the terminal
-3. Install Angular CLI by running this command in the terminal - 
+3. Install Angular CLI by running this command in the terminal: 
 npm install -g @angular/cli@7.0.0
 4. Navigate to the folder 'frontend' by running cd src/main/frontend
 in the terminal
